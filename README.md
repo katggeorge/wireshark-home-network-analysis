@@ -37,8 +37,13 @@ Key findings:
 ## Findings
 
 ### Protocol Distribution
+
+<img width="1206" height="654" alt="Screenshot 2026-05-28 at 9 40 03 PM" src="https://github.com/user-attachments/assets/c707627a-f0bb-4590-9141-1347ca02e9ee" />
+
 - UDP traffic: approximately 88.9%
 - TCP traffic: lower percentage compared to UDP
+
+The protocol hierarchy statistics showed that UDP traffic represented the majority of captured traffic during analysis. 
 
 ### Encryption Observations
 Most traffic was encrypted, likely due to:
