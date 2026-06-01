@@ -1,5 +1,8 @@
 # Wireshark Home Network Analysis
+## Summary
+This project analyzes real home network traffic using Wireshark to identify protocol behavior, encryption patterns, and modern network trends like QUIC and IPv6 dominance.
 
+---
 ## Table of Contents
 
 - Objective
@@ -8,6 +11,8 @@
 - Findings
 - Skills Practiced
 - Lessons Learned
+
+---
 
 ## Objective
 
@@ -52,8 +57,6 @@ Key findings:
 The protocol hierarchy statistics revealed that UDP traffic accounted for approximately 88.9% of captured traffic, while TCP represented a smaller percentage.
 
 This distribution is consistent with modern web activity where services increasingly utilize QUIC over UDP.
-
-The protocol hierarchy statistics showed that UDP traffic represented the majority of captured traffic during analysis. 
 
 ---
 ### DNS Activity
@@ -120,3 +123,7 @@ This project improved my understanding of:
 - IPv4 and IPv6 communication
 - Basic SOC-style investigation workflows
 - Technical documentation practices
+
+---
+## Key Takeaway
+Modern network traffic is predominantly encrypted and UDP-based, requiring analysts to focus on metadata, protocol behavior, and traffic patterns rather than payload inspection.
