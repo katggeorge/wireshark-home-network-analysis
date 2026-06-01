@@ -66,7 +66,7 @@ DNS traffic was observed throughout the capture and demonstrated how devices res
 
 ---
 ### TCP Communications
-<img width="1161" height="662" alt="tcp-conversations" src="https://github.com/user-attachments/assets/4165df46-22fe-4066-bcfb-b249ca8ceb63" />
+<img width="1161" height="662" alt="tcp-conversations" src="https://github.com/user-attachments/assets/a68ecf5a-e648-4173-9cf8-63751cc58adf" />
 
 TCP conversations showed established connections between local devices and external services using reliable transport protocols.
 
