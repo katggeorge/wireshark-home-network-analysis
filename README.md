@@ -1,15 +1,25 @@
 # Wireshark Home Network Analysis
 
+## Table of Contents
+
+- Objective
+- Tools Used
+- Investigation Summary
+- Findings
+- Skills Practiced
+- Lessons Learned
+
 ## Objective
 
-Analyze network traffic using Wireshark to better understand:
-- Network protocols
-- Encrypted vs unencrypted traffic
-- IPv4 and IPv6 usage
-- TCP and UDP communication
-- Basic traffic investigation techniques
+The goal of this project was to capture and analyze network traffic from a home network environment using Wireshark.
 
----
+The investigation focused on:
+
+- Identifying common network protocols
+- Comparing encrypted and unencrypted traffic
+- Examining IPv4 and IPv6 usage
+- Understanding TCP and UDP communication patterns
+- Practicing basic network traffic analysis techniques used in Security Operations Center (SOC) environments
 
 ## Tools Used
 
@@ -17,14 +27,16 @@ Analyze network traffic using Wireshark to better understand:
 - macOS
 - Home network traffic capture
 
----
-
-## Investigation Summary
+## Methodology
 
 The packet capture was analyzed using:
+
 - Protocol Hierarchy Statistics
-- Packet inspection
-- Traffic filtering
+- Packet Inspection
+- Traffic Filtering
+- Protocol Analysis
+
+The objective was to identify traffic patterns and establish a basic understanding of network activity occurring on the host system.
 
 Key findings:
 - UDP traffic represented the majority of network traffic
@@ -32,30 +44,63 @@ Key findings:
 - IPv6 traffic was more common than IPv4
 - Multiple modern web protocols were identified
 
----
-
 ## Findings
 
 ### Protocol Distribution
+<img width="1196" height="631" alt="protocol-hierarchy-statistics" src="https://github.com/user-attachments/assets/b549cb18-fbb1-4f4d-96a2-0b9536f86e5e" />
 
-<img width="1206" height="654" alt="Screenshot 2026-05-28 at 9 40 03 PM" src="https://github.com/user-attachments/assets/c707627a-f0bb-4590-9141-1347ca02e9ee" />
+The protocol hierarchy statistics revealed that UDP traffic accounted for approximately 88.9% of captured traffic, while TCP represented a smaller percentage.
 
-- UDP traffic: approximately 88.9%
-- TCP traffic: lower percentage compared to UDP
+This distribution is consistent with modern web activity where services increasingly utilize QUIC over UDP.
 
 The protocol hierarchy statistics showed that UDP traffic represented the majority of captured traffic during analysis. 
 
-### Encryption Observations
-Most traffic was encrypted, likely due to:
-- HTTPS
-- QUIC protocol traffic
-- Modern browser encryption standards
+---
+### DNS Activity
+<img width="1195" height="892" alt="dns-traffic-analysis" src="https://github.com/user-attachments/assets/f9c85fad-6560-4a1f-a5d8-2f027ea0f685" />
 
-### IP Version Usage
-- Majority IPv6 traffic observed
-- Smaller amount of IPv4 traffic detected
+DNS traffic was observed throughout the capture and demonstrated how devices resolve domain names before establishing network connections.
 
 ---
+### TCP Communications
+<img width="1161" height="662" alt="tcp-conversations" src="https://github.com/user-attachments/assets/4165df46-22fe-4066-bcfb-b249ca8ceb63" />
+
+TCP conversations showed established connections between local devices and external services using reliable transport protocols.
+
+---
+
+### Encryption Observations
+<img width="1191" height="893" alt="quic-udp-traffic" src="https://github.com/user-attachments/assets/cb6baf99-2cc3-4518-b902-0c1e4eb9811e" />
+
+Most observed traffic was encrypted.
+Protocols and technologies contributing to encrypted communication included:
+
+- HTTPS
+- TLS
+- QUIC
+
+This limited visibility into application-layer content while still allowing analysis of metadata and traffic behavior.
+
+---
+### IP Version Usage
+The capture contained both IPv4 and IPv6 traffic.
+
+Observations included:
+- IPv6 traffic appeared more frequently than IPv4
+- Modern devices and services increasingly favor IPv6 connectivity
+- Both protocols were active during normal browsing activity
+---
+## Security Relevance
+
+Understanding normal network behavior is essential for identifying anomalies and potential security threats.
+
+Skills developed during this project include:
+
+- Establishing network baselines
+- Identifying protocol usage patterns
+- Investigating encrypted traffic
+- Interpreting packet-level information
+- Documenting technical findings
 
 ## Skills Practiced
 
@@ -66,12 +111,12 @@ Most traffic was encrypted, likely due to:
 - Wireshark filtering
 - Security analysis documentation
 
----
-
 ## Lessons Learned
+This project improved my understanding of:
 
-This lab improved understanding of:
 - Real-world network behavior
 - Encrypted traffic patterns
-- Common internet protocols
-- Basic SOC analyst investigation workflows
+- Protocol hierarchy analysis
+- IPv4 and IPv6 communication
+- Basic SOC-style investigation workflows
+- Technical documentation practices
