@@ -1,16 +1,20 @@
 # Wireshark Home Network Analysis
-## Summary
-This project analyzes real home network traffic using Wireshark to identify protocol behavior, encryption patterns, and modern network trends like QUIC and IPv6 dominance.
+## Executive Summary
+A Wireshark packet capture was performed on a home network to analyze protocol usage, encryption trends, and communication behavior. Analysis identified heavy UDP utilization driven by QUIC traffic, widespread encryption through HTTPS/TLS, and significant IPv6 adoption. The investigation established a baseline of normal network activity and demonstrated foundational packet analysis skills used in Security Operation Centers (SOCs).
 
 ---
 ## Table of Contents
-
+- Executive Summary
 - Objective
 - Tools Used
-- Investigation Summary
+- Methodology
 - Findings
+- Security Relevance
+- Wireshark Filters Used
 - Skills Practiced
 - Lessons Learned
+- Analyst Assessment
+- Key Takeaway
 
 ---
 
@@ -93,6 +97,7 @@ Observations included:
 - Modern devices and services increasingly favor IPv6 connectivity
 - Both protocols were active during normal browsing activity
 ---
+
 ## Security Relevance
 
 Understanding normal network behavior is essential for identifying anomalies and potential security threats.
@@ -104,6 +109,14 @@ Skills developed during this project include:
 - Investigating encrypted traffic
 - Interpreting packet-level information
 - Documenting technical findings
+
+## Wireshark Filters Used
+
+- dns
+- tcp
+- udp
+- ipv6
+- quic
 
 ## Skills Practiced
 
@@ -123,6 +136,19 @@ This project improved my understanding of:
 - IPv4 and IPv6 communication
 - Basic SOC-style investigation workflows
 - Technical documentation practices
+
+## Analyst Assessment
+No malicious traffic was identified during this capture.
+
+Traffic patterns appeared consistent with normal web browsing activity.
+
+The dominance of encrypted QUIC traffic demonstrates the increasing importance of metadata analysis when investigating modern network environments.
+
+Future investigations could focus on: 
+- DNS tunneling detection
+- Suspicious outbound connections
+- Beaconing behavior
+- Command and control traffic indicators
 
 ---
 ## Key Takeaway
